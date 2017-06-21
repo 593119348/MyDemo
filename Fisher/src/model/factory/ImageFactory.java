@@ -1,0 +1,458 @@
+package model.factory;
+
+import java.awt.Image;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.ImageIcon;
+
+public class ImageFactory extends Factory {
+	
+	private static ImageFactory imageFactory;
+	
+	private static final String IMAGE_ROOT_PATH = "imgs/";
+	private static final String FISHER_IMAGE_PATH_LEFT = IMAGE_ROOT_PATH+"left/";
+	private static final String FISHER_IMAGE_PATH_RIGHT = IMAGE_ROOT_PATH+"right/";
+	private static final String FISHER_IMAGE_PATH_BUTTOM = IMAGE_ROOT_PATH+"buttom/";
+	private static final String FISHER_IMAGE_NAME = "fish";
+	private static final String FISHER_IMAGE_CATCH_NAME = "catch";
+	private static final String FISHER_IMAGE_CONJUNCTION = "_";
+	private static final String FISHER_IMAGE_TYPE = ".png";
+
+	public static final int FISHER_LEFT = 0;
+	public static final int FISHER_RIGHT = 1;
+	public static final int FISHER_BUTTOM = 2;
+	public static final int FISHER_CATCH_LEFT = 3;
+	public static final int FISHER_CATCH_RIGHT = 4;
+	public static final int FISHER_CATCH_BUTTOM = 5;
+	public static final int FISHER_01 = 1;
+	public static final int FISHER_02 = 2;
+	public static final int FISHER_03 = 3;
+	public static final int FISHER_04 = 4;
+	public static final int FISHER_05 = 5;
+	public static final int FISHER_06 = 6;
+	public static final int FISHER_07 = 7;
+	public static final int FISHER_08 = 8;
+	public static final int FISHER_09 = 9;
+	public static final int FISHER_10 = 10;
+	public static final int FISHER_11 = 11;
+	
+	
+	private static final Image[] FISHER_01_LEFT_IMAGES = new Image[10];
+	private static final Image[] FISHER_01_RIGHT_IMAGES = new Image[10];
+	private static final Image[] FISHER_01_BUTTOM_IMAGES = new Image[10];
+	private static final Image[] FISHER_01_LEFT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_01_RIGHT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_01_BUTTOM_CATCH_IMAGES = new Image[2];
+	
+	private static final Image[] FISHER_02_LEFT_IMAGES = new Image[10];
+	private static final Image[] FISHER_02_RIGHT_IMAGES = new Image[10];
+	private static final Image[] FISHER_02_BUTTOM_IMAGES = new Image[10];
+	private static final Image[] FISHER_02_LEFT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_02_RIGHT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_02_BUTTOM_CATCH_IMAGES = new Image[2];
+	
+	private static final Image[] FISHER_03_LEFT_IMAGES = new Image[10];
+	private static final Image[] FISHER_03_RIGHT_IMAGES = new Image[10];
+	private static final Image[] FISHER_03_BUTTOM_IMAGES = new Image[10];
+	private static final Image[] FISHER_03_LEFT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_03_RIGHT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_03_BUTTOM_CATCH_IMAGES = new Image[2];
+	
+	private static final Image[] FISHER_04_LEFT_IMAGES = new Image[10];
+	private static final Image[] FISHER_04_RIGHT_IMAGES = new Image[10];
+	private static final Image[] FISHER_04_BUTTOM_IMAGES = new Image[10];
+	private static final Image[] FISHER_04_LEFT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_04_RIGHT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_04_BUTTOM_CATCH_IMAGES = new Image[2];
+	
+	private static final Image[] FISHER_05_LEFT_IMAGES = new Image[10];
+	private static final Image[] FISHER_05_RIGHT_IMAGES = new Image[10];
+	private static final Image[] FISHER_05_BUTTOM_IMAGES = new Image[10];
+	private static final Image[] FISHER_05_LEFT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_05_RIGHT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_05_BUTTOM_CATCH_IMAGES = new Image[2];
+	
+	private static final Image[] FISHER_06_LEFT_IMAGES = new Image[10];
+	private static final Image[] FISHER_06_RIGHT_IMAGES = new Image[10];
+	private static final Image[] FISHER_06_BUTTOM_IMAGES = new Image[10];
+	private static final Image[] FISHER_06_LEFT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_06_RIGHT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_06_BUTTOM_CATCH_IMAGES = new Image[2];
+	
+	private static final Image[] FISHER_07_LEFT_IMAGES = new Image[10];
+	private static final Image[] FISHER_07_RIGHT_IMAGES = new Image[10];
+	private static final Image[] FISHER_07_BUTTOM_IMAGES = new Image[10];
+	private static final Image[] FISHER_07_LEFT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_07_RIGHT_CATCH_IMAGES = new Image[2];
+	private static final Image[] FISHER_07_BUTTOM_CATCH_IMAGES = new Image[2];
+	
+	private static final Image[] FISHER_08_LEFT_IMAGES = new Image[10];
+	private static final Image[] FISHER_08_RIGHT_IMAGES = new Image[10];
+	private static final Image[] FISHER_08_BUTTOM_IMAGES = new Image[10];
+	private static final Image[] FISHER_08_LEFT_CATCH_IMAGES = new Image[4];
+	private static final Image[] FISHER_08_RIGHT_CATCH_IMAGES = new Image[4];
+	private static final Image[] FISHER_08_BUTTOM_CATCH_IMAGES = new Image[4];
+	
+	private static final Image[] FISHER_09_LEFT_IMAGES = new Image[10];
+	private static final Image[] FISHER_09_RIGHT_IMAGES = new Image[10];
+	private static final Image[] FISHER_09_BUTTOM_IMAGES = new Image[10];
+	private static final Image[] FISHER_09_LEFT_CATCH_IMAGES = new Image[4];
+	private static final Image[] FISHER_09_RIGHT_CATCH_IMAGES = new Image[4];
+	private static final Image[] FISHER_09_BUTTOM_CATCH_IMAGES = new Image[4];
+	
+	private static final Image[] FISHER_10_LEFT_IMAGES = new Image[10];
+	private static final Image[] FISHER_10_RIGHT_IMAGES = new Image[10];
+	private static final Image[] FISHER_10_BUTTOM_IMAGES = new Image[10];
+	private static final Image[] FISHER_10_LEFT_CATCH_IMAGES = new Image[4];
+	private static final Image[] FISHER_10_RIGHT_CATCH_IMAGES = new Image[4];
+	private static final Image[] FISHER_10_BUTTOM_CATCH_IMAGES = new Image[4];
+
+	private static final Image[] FISHER_11_LEFT_IMAGES = new Image[10];
+	private static final Image[] FISHER_11_RIGHT_IMAGES = new Image[10];
+	private static final Image[] FISHER_11_BUTTOM_IMAGES = new Image[10];
+	private static final Image[] FISHER_11_LEFT_CATCH_IMAGES = new Image[4];
+	private static final Image[] FISHER_11_RIGHT_CATCH_IMAGES = new Image[4];
+	private static final Image[] FISHER_11_BUTTOM_CATCH_IMAGES = new Image[4];
+	
+	private static final List<Image[]> FISHER_01_IMAGES = new ArrayList<Image[]>();
+	private static final List<Image[]> FISHER_02_IMAGES = new ArrayList<Image[]>();
+	private static final List<Image[]> FISHER_03_IMAGES = new ArrayList<Image[]>();
+	private static final List<Image[]> FISHER_04_IMAGES = new ArrayList<Image[]>();
+	private static final List<Image[]> FISHER_05_IMAGES = new ArrayList<Image[]>();
+	private static final List<Image[]> FISHER_06_IMAGES = new ArrayList<Image[]>();
+	private static final List<Image[]> FISHER_07_IMAGES = new ArrayList<Image[]>();
+	private static final List<Image[]> FISHER_08_IMAGES = new ArrayList<Image[]>();
+	private static final List<Image[]> FISHER_09_IMAGES = new ArrayList<Image[]>();
+	private static final List<Image[]> FISHER_10_IMAGES = new ArrayList<Image[]>();
+	private static final List<Image[]> FISHER_11_IMAGES = new ArrayList<Image[]>();
+
+	public static ImageFactory getIstance() {
+		if (imageFactory==null) {
+			synchronized (new Object()) {
+				if (imageFactory==null) {
+					imageFactory = new ImageFactory();
+				}
+			}
+		}
+		return imageFactory;
+	}
+	
+	private ImageFactory() {
+		for (int i = 1; i <= FISHER_01_LEFT_IMAGES.length; i++) {
+			FISHER_01_LEFT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"01"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_01_RIGHT_IMAGES.length; i++) {
+			FISHER_01_RIGHT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"01"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_01_BUTTOM_IMAGES.length; i++) {
+			FISHER_01_BUTTOM_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"01"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_01_LEFT_CATCH_IMAGES.length; i++) {
+			FISHER_01_LEFT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"01"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_01_RIGHT_CATCH_IMAGES.length; i++) {
+			FISHER_01_RIGHT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"01"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_01_BUTTOM_CATCH_IMAGES.length; i++) {
+			FISHER_01_BUTTOM_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"01"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		
+		for (int i = 1; i <= FISHER_02_LEFT_IMAGES.length; i++) {
+			FISHER_02_LEFT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"02"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_02_RIGHT_IMAGES.length; i++) {
+			FISHER_02_RIGHT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"02"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_02_BUTTOM_IMAGES.length; i++) {
+			FISHER_02_BUTTOM_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"02"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_02_LEFT_CATCH_IMAGES.length; i++) {
+			FISHER_02_LEFT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"02"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_02_RIGHT_CATCH_IMAGES.length; i++) {
+			FISHER_02_RIGHT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"02"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_02_BUTTOM_CATCH_IMAGES.length; i++) {
+			FISHER_02_BUTTOM_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"02"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		
+		for (int i = 1; i <= FISHER_03_LEFT_IMAGES.length; i++) {
+			FISHER_03_LEFT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"03"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_03_RIGHT_IMAGES.length; i++) {
+			FISHER_03_RIGHT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"03"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_03_BUTTOM_IMAGES.length; i++) {
+			FISHER_03_BUTTOM_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"03"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_03_LEFT_CATCH_IMAGES.length; i++) {
+			FISHER_03_LEFT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"03"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_03_RIGHT_CATCH_IMAGES.length; i++) {
+			FISHER_03_RIGHT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"03"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_03_BUTTOM_CATCH_IMAGES.length; i++) {
+			FISHER_03_BUTTOM_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"03"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		
+		for (int i = 1; i <= FISHER_04_LEFT_IMAGES.length; i++) {
+			FISHER_04_LEFT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"04"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_04_RIGHT_IMAGES.length; i++) {
+			FISHER_04_RIGHT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"04"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_04_BUTTOM_IMAGES.length; i++) {
+			FISHER_04_BUTTOM_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"04"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_04_LEFT_CATCH_IMAGES.length; i++) {
+			FISHER_04_LEFT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"04"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_04_RIGHT_CATCH_IMAGES.length; i++) {
+			FISHER_04_RIGHT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"04"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_04_BUTTOM_CATCH_IMAGES.length; i++) {
+			FISHER_04_BUTTOM_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"04"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		
+		for (int i = 1; i <= FISHER_05_LEFT_IMAGES.length; i++) {
+			FISHER_05_LEFT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"05"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_05_RIGHT_IMAGES.length; i++) {
+			FISHER_05_RIGHT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"05"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_05_BUTTOM_IMAGES.length; i++) {
+			FISHER_05_BUTTOM_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"05"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_05_LEFT_CATCH_IMAGES.length; i++) {
+			FISHER_05_LEFT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"05"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_05_RIGHT_CATCH_IMAGES.length; i++) {
+			FISHER_05_RIGHT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"05"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_05_BUTTOM_CATCH_IMAGES.length; i++) {
+			FISHER_05_BUTTOM_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"05"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		
+		for (int i = 1; i <= FISHER_06_LEFT_IMAGES.length; i++) {
+			FISHER_06_LEFT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"06"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_06_RIGHT_IMAGES.length; i++) {
+			FISHER_06_RIGHT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"06"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_06_BUTTOM_IMAGES.length; i++) {
+			FISHER_06_BUTTOM_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"06"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_06_LEFT_CATCH_IMAGES.length; i++) {
+			FISHER_06_LEFT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"06"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_06_RIGHT_CATCH_IMAGES.length; i++) {
+			FISHER_06_RIGHT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"06"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_06_BUTTOM_CATCH_IMAGES.length; i++) {
+			FISHER_06_BUTTOM_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"06"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		
+		for (int i = 1; i <= FISHER_07_LEFT_IMAGES.length; i++) {
+			FISHER_07_LEFT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"07"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_07_RIGHT_IMAGES.length; i++) {
+			FISHER_07_RIGHT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"07"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_07_BUTTOM_IMAGES.length; i++) {
+			FISHER_07_BUTTOM_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"07"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_07_LEFT_CATCH_IMAGES.length; i++) {
+			FISHER_07_LEFT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"07"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_07_RIGHT_CATCH_IMAGES.length; i++) {
+			FISHER_07_RIGHT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"07"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_07_BUTTOM_CATCH_IMAGES.length; i++) {
+			FISHER_07_BUTTOM_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"07"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		
+		for (int i = 1; i <= FISHER_08_LEFT_IMAGES.length; i++) {
+			FISHER_08_LEFT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"08"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_08_RIGHT_IMAGES.length; i++) {
+			FISHER_08_RIGHT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"08"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_08_BUTTOM_IMAGES.length; i++) {
+			FISHER_08_BUTTOM_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"08"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_08_LEFT_CATCH_IMAGES.length; i++) {
+			FISHER_08_LEFT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"08"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_08_RIGHT_CATCH_IMAGES.length; i++) {
+			FISHER_08_RIGHT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"08"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_08_BUTTOM_CATCH_IMAGES.length; i++) {
+			FISHER_08_BUTTOM_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"08"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		
+		for (int i = 1; i <= FISHER_09_LEFT_IMAGES.length; i++) {
+			FISHER_09_LEFT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"09"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_09_RIGHT_IMAGES.length; i++) {
+			FISHER_09_RIGHT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"09"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_09_BUTTOM_IMAGES.length; i++) {
+			FISHER_09_BUTTOM_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"09"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_09_LEFT_CATCH_IMAGES.length; i++) {
+			FISHER_09_LEFT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"09"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_09_RIGHT_CATCH_IMAGES.length; i++) {
+			FISHER_09_RIGHT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"09"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_09_BUTTOM_CATCH_IMAGES.length; i++) {
+			FISHER_09_BUTTOM_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"09"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		
+		for (int i = 1; i <= FISHER_10_LEFT_IMAGES.length; i++) {
+			FISHER_10_LEFT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"10"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_10_RIGHT_IMAGES.length; i++) {
+			FISHER_10_RIGHT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"10"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_10_BUTTOM_IMAGES.length; i++) {
+			FISHER_10_BUTTOM_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"10"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_10_LEFT_CATCH_IMAGES.length; i++) {
+			FISHER_10_LEFT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"10"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_10_RIGHT_CATCH_IMAGES.length; i++) {
+			FISHER_10_RIGHT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"10"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_10_BUTTOM_CATCH_IMAGES.length; i++) {
+			FISHER_10_BUTTOM_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"10"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		
+		for (int i = 1; i <= FISHER_11_LEFT_IMAGES.length; i++) {
+			FISHER_11_LEFT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"11"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_11_RIGHT_IMAGES.length; i++) {
+			FISHER_11_RIGHT_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"11"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_11_BUTTOM_IMAGES.length; i++) {
+			FISHER_11_BUTTOM_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"11"+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_11_LEFT_CATCH_IMAGES.length; i++) {
+			FISHER_11_LEFT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_LEFT+FISHER_IMAGE_NAME+"11"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_11_RIGHT_CATCH_IMAGES.length; i++) {
+			FISHER_11_RIGHT_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_RIGHT+FISHER_IMAGE_NAME+"11"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+		for (int i = 1; i <= FISHER_11_BUTTOM_CATCH_IMAGES.length; i++) {
+			FISHER_11_BUTTOM_CATCH_IMAGES[i-1] = new ImageIcon(FISHER_IMAGE_PATH_BUTTOM+FISHER_IMAGE_NAME+"11"+FISHER_IMAGE_CONJUNCTION+FISHER_IMAGE_CATCH_NAME+FISHER_IMAGE_CONJUNCTION+(i<10?"0"+i:i)+FISHER_IMAGE_TYPE).getImage();
+		}
+
+		FISHER_01_IMAGES.add(FISHER_01_LEFT_IMAGES);
+		FISHER_01_IMAGES.add(FISHER_01_RIGHT_IMAGES);
+		FISHER_01_IMAGES.add(FISHER_01_BUTTOM_IMAGES);
+		FISHER_01_IMAGES.add(FISHER_01_LEFT_CATCH_IMAGES);
+		FISHER_01_IMAGES.add(FISHER_01_RIGHT_CATCH_IMAGES);
+		FISHER_01_IMAGES.add(FISHER_01_BUTTOM_CATCH_IMAGES);
+		
+		FISHER_02_IMAGES.add(FISHER_02_LEFT_IMAGES);
+		FISHER_02_IMAGES.add(FISHER_02_RIGHT_IMAGES);
+		FISHER_02_IMAGES.add(FISHER_02_BUTTOM_IMAGES);
+		FISHER_02_IMAGES.add(FISHER_02_LEFT_CATCH_IMAGES);
+		FISHER_02_IMAGES.add(FISHER_02_RIGHT_CATCH_IMAGES);
+		FISHER_02_IMAGES.add(FISHER_02_BUTTOM_CATCH_IMAGES);
+
+		FISHER_03_IMAGES.add(FISHER_03_LEFT_IMAGES);
+		FISHER_03_IMAGES.add(FISHER_03_RIGHT_IMAGES);
+		FISHER_03_IMAGES.add(FISHER_03_BUTTOM_IMAGES);
+		FISHER_03_IMAGES.add(FISHER_03_LEFT_CATCH_IMAGES);
+		FISHER_03_IMAGES.add(FISHER_03_RIGHT_CATCH_IMAGES);
+		FISHER_03_IMAGES.add(FISHER_03_BUTTOM_CATCH_IMAGES);
+
+		FISHER_04_IMAGES.add(FISHER_04_LEFT_IMAGES);
+		FISHER_04_IMAGES.add(FISHER_04_RIGHT_IMAGES);
+		FISHER_04_IMAGES.add(FISHER_04_BUTTOM_IMAGES);
+		FISHER_04_IMAGES.add(FISHER_04_LEFT_CATCH_IMAGES);
+		FISHER_04_IMAGES.add(FISHER_04_RIGHT_CATCH_IMAGES);
+		FISHER_04_IMAGES.add(FISHER_04_BUTTOM_CATCH_IMAGES);
+
+		FISHER_05_IMAGES.add(FISHER_05_LEFT_IMAGES);
+		FISHER_05_IMAGES.add(FISHER_05_RIGHT_IMAGES);
+		FISHER_05_IMAGES.add(FISHER_05_BUTTOM_IMAGES);
+		FISHER_05_IMAGES.add(FISHER_05_LEFT_CATCH_IMAGES);
+		FISHER_05_IMAGES.add(FISHER_05_RIGHT_CATCH_IMAGES);
+		FISHER_05_IMAGES.add(FISHER_05_BUTTOM_CATCH_IMAGES);
+
+		FISHER_06_IMAGES.add(FISHER_06_LEFT_IMAGES);
+		FISHER_06_IMAGES.add(FISHER_06_RIGHT_IMAGES);
+		FISHER_06_IMAGES.add(FISHER_06_BUTTOM_IMAGES);
+		FISHER_06_IMAGES.add(FISHER_06_LEFT_CATCH_IMAGES);
+		FISHER_06_IMAGES.add(FISHER_06_RIGHT_CATCH_IMAGES);
+		FISHER_06_IMAGES.add(FISHER_06_BUTTOM_CATCH_IMAGES);
+
+		FISHER_07_IMAGES.add(FISHER_07_LEFT_IMAGES);
+		FISHER_07_IMAGES.add(FISHER_07_RIGHT_IMAGES);
+		FISHER_07_IMAGES.add(FISHER_07_BUTTOM_IMAGES);
+		FISHER_07_IMAGES.add(FISHER_07_LEFT_CATCH_IMAGES);
+		FISHER_07_IMAGES.add(FISHER_07_RIGHT_CATCH_IMAGES);
+		FISHER_07_IMAGES.add(FISHER_07_BUTTOM_CATCH_IMAGES);
+
+		FISHER_08_IMAGES.add(FISHER_08_LEFT_IMAGES);
+		FISHER_08_IMAGES.add(FISHER_08_RIGHT_IMAGES);
+		FISHER_08_IMAGES.add(FISHER_08_BUTTOM_IMAGES);
+		FISHER_08_IMAGES.add(FISHER_08_LEFT_CATCH_IMAGES);
+		FISHER_08_IMAGES.add(FISHER_08_RIGHT_CATCH_IMAGES);
+		FISHER_08_IMAGES.add(FISHER_08_BUTTOM_CATCH_IMAGES);
+
+		FISHER_09_IMAGES.add(FISHER_09_LEFT_IMAGES);
+		FISHER_09_IMAGES.add(FISHER_09_RIGHT_IMAGES);
+		FISHER_09_IMAGES.add(FISHER_09_BUTTOM_IMAGES);
+		FISHER_09_IMAGES.add(FISHER_09_LEFT_CATCH_IMAGES);
+		FISHER_09_IMAGES.add(FISHER_09_RIGHT_CATCH_IMAGES);
+		FISHER_09_IMAGES.add(FISHER_09_BUTTOM_CATCH_IMAGES);
+
+		FISHER_10_IMAGES.add(FISHER_10_LEFT_IMAGES);
+		FISHER_10_IMAGES.add(FISHER_10_RIGHT_IMAGES);
+		FISHER_10_IMAGES.add(FISHER_10_BUTTOM_IMAGES);
+		FISHER_10_IMAGES.add(FISHER_10_LEFT_CATCH_IMAGES);
+		FISHER_10_IMAGES.add(FISHER_10_RIGHT_CATCH_IMAGES);
+		FISHER_10_IMAGES.add(FISHER_10_BUTTOM_CATCH_IMAGES);
+
+		FISHER_11_IMAGES.add(FISHER_11_LEFT_IMAGES);
+		FISHER_11_IMAGES.add(FISHER_11_RIGHT_IMAGES);
+		FISHER_11_IMAGES.add(FISHER_11_BUTTOM_IMAGES);
+		FISHER_11_IMAGES.add(FISHER_11_LEFT_CATCH_IMAGES);
+		FISHER_11_IMAGES.add(FISHER_11_RIGHT_CATCH_IMAGES);
+		FISHER_11_IMAGES.add(FISHER_11_BUTTOM_CATCH_IMAGES);
+	}
+	
+	public List<Image[]> getObject(int type) {
+		switch (type) {
+		case FISHER_01:
+			return FISHER_01_IMAGES;
+		case FISHER_02:
+			return FISHER_02_IMAGES;
+		case FISHER_03:
+			return FISHER_03_IMAGES;
+		case FISHER_04:
+			return FISHER_04_IMAGES;
+		case FISHER_05:
+			return FISHER_05_IMAGES;
+		case FISHER_06:
+			return FISHER_06_IMAGES;
+		case FISHER_07:
+			return FISHER_07_IMAGES;
+		case FISHER_08:
+			return FISHER_08_IMAGES;
+		case FISHER_09:
+			return FISHER_09_IMAGES;
+		case FISHER_10:
+			return FISHER_10_IMAGES;
+		case FISHER_11:
+			return FISHER_11_IMAGES;
+		
+		}
+		return null;
+	}
+
+}
